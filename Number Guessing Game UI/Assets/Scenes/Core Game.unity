@@ -1131,6 +1131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f795ede36a7de704c98ce7a0244c5c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guess: 0
+  minValue: 1
+  maxValue: 100
 --- !u!1 &1232746309
 GameObject:
   m_ObjectHideFlags: 0

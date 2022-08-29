@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NumberGuessingGame : MonoBehaviour
 {
-    private int guess = 5;
-    private int minValue = 1;
-    private int maxValue = 10;
+    [SerializeField] private int guess;
+    [SerializeField] private int minValue;
+    [SerializeField] private int maxValue;
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +18,7 @@ public class NumberGuessingGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            minValue = guess;
-            guess = (maxValue + minValue) / 2;
-            Debug.Log("Is it higher or lower than: " + guess);
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            maxValue = guess;
-            guess = (maxValue + minValue) / 2;
-            Debug.Log("Is it higher or lower than: " + guess);
-        }
+        
         if(Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("I see that I've guessed your number, I suppose that I have won.");
@@ -37,17 +27,30 @@ public class NumberGuessingGame : MonoBehaviour
         }
     }
 
+    public void OnPressHigher()
+    {
+            minValue = guess;
+            guess = (maxValue + minValue) / 2;
+            Debug.Log("Is it higher or lower than: " + guess);
+    }
+
+    public void OnPressLower()
+    {
+            maxValue = guess;
+            guess = (maxValue + minValue) / 2;
+            Debug.Log("Is it higher or lower than: " + guess);
+    }
+
+    public void NextGuess()
+    {
+
+    }
+
     void StartGame()
     {
         guess= 5;
         minValue = 1;
         maxValue = 10;
-        
-        Debug.Log("Welcome to our Number Guessing Game.");
-        Debug.Log("The number range is from " + minValue + " and " + maxValue);
-        Debug.Log("Guess a number between the given range");
-        Debug.Log("Tell me if your number is higher or lower than: " + guess + "?");
-        Debug.Log("Push Up arrow = Higher, Push Down arrow = Lower, Push Enter = correct");
         maxValue = maxValue + 1;
     }
 }
