@@ -8,6 +8,7 @@ public class NumberGuessingGame : MonoBehaviour
     [SerializeField] private int guess;
     [SerializeField] private int minValue;
     [SerializeField] private int maxValue;
+    [SerializeField] private TextMeshProUGUI guessText;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,8 @@ public class NumberGuessingGame : MonoBehaviour
 
     public void NextGuess()
     {
-
+            guess = Random.Range(minValue, maxValue + 1);
+            guessText.text = guess.ToString();
     }
 
     void StartGame()
@@ -52,5 +54,7 @@ public class NumberGuessingGame : MonoBehaviour
         minValue = 1;
         maxValue = 10;
         maxValue = maxValue + 1;
+        
+        NextGuess();
     }
 }

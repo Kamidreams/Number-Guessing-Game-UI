@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 229778008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209285543}
+        m_TargetAssemblyTypeName: NumberGuessingGame, Assembly-CSharp
+        m_MethodName: OnPressHigher
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &229778008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,6 +1146,7 @@ MonoBehaviour:
   guess: 0
   minValue: 1
   maxValue: 100
+  guessText: {fileID: 0}
 --- !u!1 &1232746309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1230,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1232746312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1209285543}
+        m_TargetAssemblyTypeName: NumberGuessingGame, Assembly-CSharp
+        m_MethodName: OnPressLower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1232746312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,7 +1364,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1273707406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 440204250}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1273707406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1426,7 @@ GameObject:
   - component: {fileID: 1486607617}
   - component: {fileID: 1486607619}
   - component: {fileID: 1486607618}
+  - component: {fileID: 1486607620}
   m_Layer: 5
   m_Name: Number Guess
   m_TagString: Untagged
@@ -1513,6 +1551,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486607616}
   m_CullTransparentMesh: 1
+--- !u!114 &1486607620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486607616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f795ede36a7de704c98ce7a0244c5c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guess: 0
+  minValue: 1
+  maxValue: 100
+  guessText: {fileID: 1486607618}
 --- !u!1 &1735546145
 GameObject:
   m_ObjectHideFlags: 0
