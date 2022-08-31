@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1209285543}
+      - m_Target: {fileID: 1486607620}
         m_TargetAssemblyTypeName: NumberGuessingGame, Assembly-CSharp
         m_MethodName: OnPressHigher
         m_Mode: 1
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   guess: 0
   minValue: 1
   maxValue: 100
-  guessText: {fileID: 0}
+  guessText: {fileID: 1486607618}
 --- !u!1 &1232746309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1209285543}
+      - m_Target: {fileID: 1486607620}
         m_TargetAssemblyTypeName: NumberGuessingGame, Assembly-CSharp
         m_MethodName: OnPressLower
         m_Mode: 1

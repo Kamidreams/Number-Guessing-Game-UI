@@ -6,8 +6,8 @@ using TMPro;
 public class NumberGuessingGame : MonoBehaviour
 {
     [SerializeField] private int guess;
-    [SerializeField] private int minValue;
-    [SerializeField] private int maxValue;
+    [SerializeField] private int minValue = 1;
+    [SerializeField] private int maxValue = 100;
     [SerializeField] private TextMeshProUGUI guessText;
 
     // Start is called before the first frame update
@@ -16,30 +16,16 @@ public class NumberGuessingGame : MonoBehaviour
        StartGame();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if(Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("I see that I've guessed your number, I suppose that I have won.");
-            Debug.Log("");
-            StartGame();
-        }
-    }
-
     public void OnPressHigher()
     {
-            minValue = guess;
-            guess = (maxValue + minValue) / 2;
-            Debug.Log("Is it higher or lower than: " + guess);
+            minValue = guess + 1;
+            NextGuess();
     }
 
     public void OnPressLower()
     {
-            maxValue = guess;
-            guess = (maxValue + minValue) / 2;
-            Debug.Log("Is it higher or lower than: " + guess);
+            maxValue = guess - 1;
+            NextGuess();
     }
 
     public void NextGuess()
@@ -50,11 +36,6 @@ public class NumberGuessingGame : MonoBehaviour
 
     void StartGame()
     {
-        guess= 5;
-        minValue = 1;
-        maxValue = 10;
-        maxValue = maxValue + 1;
-        
         NextGuess();
     }
 }
